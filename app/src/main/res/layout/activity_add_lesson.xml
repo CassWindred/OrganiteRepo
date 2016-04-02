@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:text="Input New Lesson!" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_textview"
+            android:layout_gravity="left"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:id="@+id/subjectTextView"
+            android:layout_marginTop="42dp"
+            android:layout_below="@+id/main_textview"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="34dp"
+            android:layout_marginStart="34dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionEditText"
+            android:layout_alignTop="@+id/HomeworkTextView"
+            android:layout_toRightOf="@+id/HomeworkTextView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input Time"
+            android:id="@+id/HomeworkTextView"
+            android:layout_alignBottom="@+id/spinner"
+            android:layout_alignLeft="@+id/subjectTextView"
+            android:layout_alignStart="@+id/subjectTextView" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/buttonDone"
+            android:layout_below="@+id/checkBoxThu"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday"
+            android:id="@+id/checkBoxMon"
+            android:checked="false"
+            android:layout_below="@+id/checkBoxSun"
+            android:layout_alignLeft="@+id/main_textview" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuesday"
+            android:id="@+id/checkBoxTeu"
+            android:checked="false"
+            android:layout_below="@+id/checkBoxWed"
+            android:layout_alignLeft="@+id/main_textview" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday"
+            android:id="@+id/checkBoxWed"
+            android:checked="false"
+            android:layout_below="@+id/checkBoxFri"
+            android:layout_alignLeft="@+id/main_textview" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thursday"
+            android:id="@+id/checkBoxThu"
+            android:checked="false"
+            android:layout_below="@+id/checkBoxTeu"
+            android:layout_alignLeft="@+id/main_textview" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friday"
+            android:id="@+id/checkBoxFri"
+            android:checked="false"
+            android:layout_below="@+id/checkBoxSat"
+            android:layout_alignLeft="@+id/main_textview" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturday"
+            android:id="@+id/checkBoxSat"
+            android:checked="false"
+            android:layout_below="@+id/checkBoxMon"
+            android:layout_alignLeft="@+id/main_textview" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunday"
+            android:id="@+id/checkBoxSun"
+            android:checked="false"
+            android:layout_below="@+id/descriptionEditText"
+            android:layout_alignLeft="@+id/main_textview"
+            android:layout_alignStart="@+id/main_textview" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Which day/s"
+            android:id="@+id/textViewDays"
+            android:layout_below="@+id/descriptionEditText"
+            android:layout_alignLeft="@+id/HomeworkTextView"
+            android:layout_alignStart="@+id/HomeworkTextView" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_alignTop="@+id/subjectTextView"
+            android:layout_toRightOf="@+id/HomeworkTextView"
+            android:layout_toEndOf="@+id/HomeworkTextView"
+            android:spinnerMode="dropdown" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

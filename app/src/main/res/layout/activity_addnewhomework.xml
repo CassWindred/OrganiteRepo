@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/inputBox"
+            android:layout_below="@+id/descriptionEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp" />
+
+        <TextView android:text="@string/TextView" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_textview"
+            android:layout_gravity="left"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input Date"
+            android:id="@+id/TimeInpButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/inputBox"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:id="@+id/subjectTextView"
+            android:layout_marginTop="79dp"
+            android:layout_below="@+id/main_textview"
+            android:layout_toLeftOf="@+id/inputBox"
+            android:layout_toStartOf="@+id/inputBox" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subjectEditText"
+            android:layout_alignTop="@+id/subjectTextView"
+            android:layout_toRightOf="@+id/subjectTextView"
+            android:layout_alignRight="@+id/inputBox"
+            android:layout_alignEnd="@+id/inputBox" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionEditText"
+            android:layout_below="@+id/subjectEditText"
+            android:layout_alignLeft="@+id/subjectEditText"
+            android:layout_alignStart="@+id/subjectEditText"
+            android:layout_marginTop="35dp"
+            android:layout_alignRight="@+id/subjectEditText"
+            android:layout_alignEnd="@+id/subjectEditText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:id="@+id/HomeworkTextView"
+            android:layout_alignTop="@+id/descriptionEditText"
+            android:layout_toLeftOf="@+id/descriptionEditText"
+            android:layout_toStartOf="@+id/descriptionEditText" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/buttonDone"
+            android:layout_below="@+id/TimeInpButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

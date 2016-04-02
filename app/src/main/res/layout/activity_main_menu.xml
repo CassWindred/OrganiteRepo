@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.tom.Organite.MainMenu">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Homework"
+        android:id="@+id/ButtonAddNewHomework"
+        android:layout_centerHorizontal="true"
+        android:onClick="moveToAddHomework"
+        android:layout_marginTop="54dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Lesson"
+        android:id="@+id/ButtonAddNewLesson"
+        android:onClick="moveToAddLesson"
+        android:layout_below="@+id/ButtonAddNewHomework"
+        android:layout_alignLeft="@+id/ButtonAddNewHomework"
+        android:layout_alignStart="@+id/ButtonAddNewHomework"
+        android:layout_alignRight="@+id/ButtonAddNewHomework"
+        android:layout_alignEnd="@+id/ButtonAddNewHomework" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Subject"
+        android:id="@+id/ButtonAddNewSubject"
+        android:onClick="moveToAddSubject"
+        android:layout_below="@+id/ButtonAddNewLesson"
+        android:layout_alignRight="@+id/ButtonAddNewLesson"
+        android:layout_alignEnd="@+id/ButtonAddNewLesson"
+        android:layout_alignLeft="@+id/ButtonAddNewLesson"
+        android:layout_alignStart="@+id/ButtonAddNewLesson" />
+
+</RelativeLayout>

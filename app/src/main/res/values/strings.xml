@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Organite</string>
+
+    <string name="TextView">Input new reminder!</string>
+    <string name="action_settings">Settings</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main_menu">Main Menu</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_add_lesson">AddLesson</string>
+    <string name="title_activity_add_subject">Add Subject</string>
+    <string name="title_activity_create_subject">Create Subject</string>
+    <string name="SavedSubjList">SavedSubjList</string>
+</resources>
