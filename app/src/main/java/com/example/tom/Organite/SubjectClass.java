@@ -14,4 +14,8 @@ public class SubjectClass {
         DefaultRoom = R;
     }
 
+    public String Getname(){
+      return Name;
+    }
+
 }

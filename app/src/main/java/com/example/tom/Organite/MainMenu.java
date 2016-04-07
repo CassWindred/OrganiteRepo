@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -50,7 +51,16 @@ public class MainMenu extends ActionBarActivity {
     }
 
     public void moveToAddLesson(View view) {
-        startActivity(new Intent(this, AddLesson.class));
+        SharedPreferenceSubjects SavedSubjs = new SharedPreferenceSubjects();
+        if (SavedSubjs.loadSubjects(this) == null) {
+            Toast.makeText(this, "There are no Subjects, please add one or more before adding lessons", Toast.LENGTH_LONG).show();
+
+
+        }
+        else {
+            startActivity(new Intent(this, AddLesson.class));
+        }
+
     }
 
     public  void moveToAddSubject(View view) {

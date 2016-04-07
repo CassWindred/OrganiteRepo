@@ -14,7 +14,7 @@ import java.util.List;
 
 public class SharedPreferenceSubjects {
     public static final String PREFS_NAME = "NKDROID_APP";
-    public static final String FAVORITES = "Favorite";
+    public static final String SUBJECTS = "Subject";
     public SharedPreferenceSubjects() {
         super();
     }
@@ -26,7 +26,7 @@ public class SharedPreferenceSubjects {
         editor = settings.edit();
         Gson gson = new Gson();
         String jsonFavorites = gson.toJson(favorites);
-        editor.putString(FAVORITES, jsonFavorites);
+        editor.putString(SUBJECTS, jsonFavorites);
         editor.commit();
     }
     public ArrayList loadSubjects(Context context) {
@@ -34,8 +34,8 @@ public class SharedPreferenceSubjects {
         SharedPreferences settings;
         List favorites;
         settings = context.getSharedPreferences(PREFS_NAME,Context.MODE_PRIVATE);
-        if (settings.contains(FAVORITES)) {
-            String jsonFavorites = settings.getString(FAVORITES, null);
+        if (settings.contains(SUBJECTS)) {
+            String jsonFavorites = settings.getString(SUBJECTS, null);
             Gson gson = new Gson();
             SubjectClass[] favoriteItems = gson.fromJson(jsonFavorites,SubjectClass[].class);
             favorites = Arrays.asList(favoriteItems);
