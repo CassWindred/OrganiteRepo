@@ -3,6 +3,7 @@ package com.example.tom.Organite;
 /**
  * Created by Tom on 29/03/2016.
  */
+//Stores information about a subject
 public class SubjectClass {
     public String Name;
     public String DefaultTeacher;

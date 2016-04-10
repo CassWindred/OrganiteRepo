@@ -8,9 +8,8 @@ import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
-/**
- * Created by Tom on 09/04/2016.
- */
+
+//The service which is triggered when the alarm set in AddLesson goes off
 public class lessonAlarmService extends Service {
     @Override
 
@@ -18,7 +17,7 @@ public class lessonAlarmService extends Service {
 
 // TODO Auto-generated method stub
 
-        Toast.makeText(this, "MyAlarmService.onCreate()", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "MyAlarmService.onCreate()", Toast.LENGTH_LONG).show();
 
     }
 
@@ -57,6 +56,7 @@ public class lessonAlarmService extends Service {
 // TODO Auto-generated method stub
 
         super.onStart(intent, startId);
+        //Creates a nofification with the information send in the intent
         String subj = intent.getStringExtra("Subject");
         Notification.Builder mBuilder = new Notification.Builder(this);
         mBuilder.setSmallIcon(R.drawable.ic_stat_name);
@@ -64,7 +64,7 @@ public class lessonAlarmService extends Service {
         mBuilder.build();
         Toast.makeText(this, "Notification built", Toast.LENGTH_SHORT);
         NotificationManager nMag = (NotificationManager) getSystemService(this.NOTIFICATION_SERVICE);
-        nMag.notify(999, mBuilder.build());
+        nMag.notify(999, mBuilder.build()); //Sends the notification created
 
     }
 
@@ -76,7 +76,7 @@ public class lessonAlarmService extends Service {
 
 // TODO Auto-generated method stub
 
-        Toast.makeText(this, "MyAlarmService.onUnbind()", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "MyAlarmService.onUnbind()", Toast.LENGTH_LONG).show();
 
         return super.onUnbind(intent);
 

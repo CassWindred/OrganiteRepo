@@ -47,23 +47,23 @@ public class MainMenu extends ActionBarActivity {
     }
 
     public void moveToAddHomework(View view) {
-        startActivity(new Intent(this, AddHomework.class));
+        startActivity(new Intent(this, AddHomework.class)); //Moves to the AddHomework activity when the Add Homework button is clicked
     }
 
     public void moveToAddLesson(View view) {
         SharedPreferenceSubjects SavedSubjs = new SharedPreferenceSubjects();
-        if (SavedSubjs.loadSubjects(this) == null) {
+        if (SavedSubjs.loadSubjects(this) == null) { //Checks if any subjects have been created
             Toast.makeText(this, "There are no Subjects, please add one or more before adding lessons", Toast.LENGTH_LONG).show();
 
 
         }
         else {
-            startActivity(new Intent(this, AddLesson.class));
+            startActivity(new Intent(this, AddLesson.class)); //Starts the AddLesson activity
         }
 
     }
 
     public  void moveToAddSubject(View view) {
-        startActivity(new Intent(this, AddSubject.class));
+        startActivity(new Intent(this, AddSubject.class)); //Starts the AddSubject activity
     }
 }

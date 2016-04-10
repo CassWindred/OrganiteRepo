@@ -32,10 +32,13 @@ public class clocktimepickerfragment extends DialogFragment implements TimePicke
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        Toast.makeText(getActivity(),"Sent Broadcast", Toast.LENGTH_SHORT).show();
+        //Creates an
+        Toast.makeText(getActivity(),"Sent Broadcast", Toast.LENGTH_SHORT).show(); //Shows a confirmation message
+        //Creates an intent with the hour and minute chosen
         Intent TimeChosen = new Intent("TimePickerBroadcast");
         TimeChosen.putExtra("hourOfDay", hourOfDay);
         TimeChosen.putExtra("minute", minute);
+        //Broadcasts the intent to AddLeson
         LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(TimeChosen);
     }
 }

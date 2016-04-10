@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
+//This class handles saving and retrieving the Arraylist of Subject Object from a sharedpreferences file
+//This requires a considerable quantity of code as well as the gson library because the sharedpreference file only contains strings
+//The gson library contains methods for converting between "json" formatted strings and arraylists which may contain objects
 public class SharedPreferenceSubjects {
     public static final String PREFS_NAME = "NKDROID_APP";
     public static final String SUBJECTS = "Subject";
@@ -19,7 +21,7 @@ public class SharedPreferenceSubjects {
         super();
     }
     public void storeSubjects(Context context, List favorites) {
-// used for store arrayList in json format
+// used to store arrayList in json format
         SharedPreferences settings;
         Editor editor;
         settings = context.getSharedPreferences(PREFS_NAME,Context.MODE_PRIVATE);
@@ -45,13 +47,14 @@ public class SharedPreferenceSubjects {
         return (ArrayList) favorites;
     }
     public void addSubject(Context context, SubjectClass beanSampleList) {
+        //adds a subject object to the existing arraylist
         List subjects = loadSubjects(context);
         if (subjects == null)
             subjects = new ArrayList();
         subjects.add(beanSampleList);
         storeSubjects(context, subjects);
     }
-    public void removeFavorite(Context context, SubjectClass beanSampleList) {
+    public void removeSubject(Context context, SubjectClass beanSampleList) { //removes the most recently added subject from the saved arraylist
         ArrayList favorites = loadSubjects(context);
         if (favorites != null) {
             favorites.remove(beanSampleList);

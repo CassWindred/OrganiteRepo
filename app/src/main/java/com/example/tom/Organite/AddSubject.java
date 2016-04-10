@@ -22,6 +22,7 @@ public class AddSubject extends AppCompatActivity {
         final Context context = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_subject);
+        //Initializes all the buttons and textviews
         doneButton = (Button) findViewById(R.id.buttonDone);
         EditName = (EditText) findViewById(R.id.editTextName);
         EditTeacher = (EditText) findViewById(R.id.editTextTeacher);
@@ -33,11 +34,11 @@ public class AddSubject extends AppCompatActivity {
         String Teacher = EditTeacher.getText().toString();
         String Room = EditRoom.getText().toString();
 
-        SubjectClass Subj= new SubjectClass(Name,Teacher,Room);
-        new SharedPreferenceSubjects().addSubject(this, Subj);
+        SubjectClass Subj= new SubjectClass(Name,Teacher,Room); //Creates a new subject object with the input given
+        new SharedPreferenceSubjects().addSubject(this, Subj); //Saves the subject object to the sharedpreferences file on the device
         Toast subjectSavedToast = Toast.makeText(getApplicationContext(), "Subject (should be) saved to device!", Toast.LENGTH_SHORT);
-        subjectSavedToast.show();
-        startActivity(new Intent(this, MainMenu.class));
+        subjectSavedToast.show(); //Displays confirmation message to suer
+        startActivity(new Intent(this, MainMenu.class)); //Returns to main menu
     }
 
 }
